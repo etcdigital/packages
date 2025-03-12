@@ -1,0 +1,50 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 1
+    commit-message:
+      prefix: "⬆️"
+    assignees:
+      - "etc-tiago"
+    labels:
+      - "dependencies"
+    versioning-strategy: "increase"
+    groups:
+      nextjs:
+        dependency-type: production
+        update-types:
+          - "minor"
+          - "patch"
+        patterns:
+          - "next"
+          - "@next/*"
+      astro:
+        dependency-type: production
+        update-types:
+          - "minor"
+          - "patch"
+        patterns:
+          - "astro"
+          - "astro-*"
+          - "@astro/*"
+      types:
+        dependency-type: "development"
+        patterns:
+          - "@types/*"
+      radix:
+        patterns:
+          - "@radix-ui/*"
+      database:
+        patterns:
+          - "@libsql/client"
+          - "drizzle-orm"
+          - "drizzle-zod"
+          - "drizzle-kit"
+      cloudflare:
+        patterns:
+          - "wrangler"
+          - "cloudflare"
+          - "@cloudflare/*"
