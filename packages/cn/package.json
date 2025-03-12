@@ -6,6 +6,10 @@
 		"clsx": "^2.0.0",
 		"tailwind-merge": "^1.14.0"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://paletasdecores.com.br",
 	"type": "module",
 	"main": "./dist/index.js",
 	"scripts": {
@@ -29,5 +33,6 @@
 	],
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
-	"sideEffects": false
+	"sideEffects": false,
+	"gitHead": "739d7c5009ce4bb7108935843ace04c9ce96c7a5"
 }
