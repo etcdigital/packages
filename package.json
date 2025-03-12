@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "publish:npm": "pnpm lerna publish --no-private"
+    "publish:npm": "pnpm -r build && pnpm lerna publish --no-private"
   },
   "dependencies": {},
   "devDependencies": {
