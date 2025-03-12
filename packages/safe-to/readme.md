@@ -1,6 +1,6 @@
 ## @etcdigital/safe-to
 
-`toStr`,`toInt`, `toFloat` e `brToFloat`
+`toStr`,`toInt`, `toFloat` e `brToFloat`...
 
 ## Related Project:
 
