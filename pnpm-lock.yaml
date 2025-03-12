@@ -21,6 +21,12 @@ importers:
         specifier: ^3.0.6
         version: 3.0.8(yaml@2.7.0)
 
+  packages/open-api-content-type:
+    dependencies:
+      zod:
+        specifier: ^3.24.2
+        version: 3.24.2
+
   packages/status-code: {}
 
   packages/status-phase: {}
@@ -2852,6 +2858,9 @@ packages:
   yargs@17.7.2:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
+
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
 snapshots:
 
@@ -5848,3 +5857,5 @@ snapshots:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+
+  zod@3.24.2: {}
