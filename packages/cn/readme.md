@@ -1,6 +1,6 @@
 ## @etcdigital/cn
 
-Comparador de classes do tailwind :)
+Comparador de classes do tailwind
 
 ## Related Project:
 
