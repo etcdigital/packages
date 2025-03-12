@@ -1,6 +1,6 @@
 ## @etcdigital/open-api-content-type
 
-Alguns auxiliares para tipo de conteúdo
+Alguns auxiliares para tipo de conteúdo para open-api.
 
 ## Related Project:
 [UserTimeline](https://usertimeline.com) – Track and visualize a user’s journey through your SaaS and websites.
