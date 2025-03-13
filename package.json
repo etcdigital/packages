@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "postinstall": "pnpm -r build",
     "publish:npm": "pnpm -r build && pnpm lerna publish --no-private"
   },
   "dependencies": {},
