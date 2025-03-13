@@ -10,7 +10,7 @@
   "dependencies": {},
   "devDependencies": {
     "lerna": "^8.2.1",
-    "bunchee": "6.3.2",
+    "bunchee": "6.4.0",
     "vitest": "^3.0.6",
     "typescript": "^5.7.2"
   }
