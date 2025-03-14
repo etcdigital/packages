@@ -8,11 +8,11 @@
     "postinstall": "pnpm -r build",
     "publish:npm": "pnpm -r build && pnpm lerna publish --no-private"
   },
-  "dependencies": {},
   "devDependencies": {
-    "lerna": "^8.2.1",
+    "@types/node": "^22.13.10",
     "bunchee": "6.4.0",
-    "vitest": "^3.0.6",
-    "typescript": "^5.7.2"
+    "lerna": "^8.2.1",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.6"
   }
 }
