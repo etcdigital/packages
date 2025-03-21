@@ -1,23 +1,22 @@
 {
-  "name": "list-to-sentence",
-  "version": "1.0.4",
+  "name": "@etcdigital/is",
+  "version": "0.0.0",
   "description": "Convert a list of words to a sentence",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/etc-tiago/list-to-sentence.git"
+    "url": "git+https://github.com/etcdigital/packages.git"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "bunchee": "6.3.2",
-    "@etcdigital/get-number-from-string": "^1.0.0"
   },
   "homepage": "https://usertimeline.com",
   "main": "./dist/index.js",
   "scripts": {
     "build": "bunchee"
+  },
+  "dependencies": {
+    "@etcdigital/get-number-from-string": "^1.0.0"
   },
   "exports": {
     ".": {
