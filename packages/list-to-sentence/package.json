@@ -1,6 +1,6 @@
 {
   "name": "list-to-sentence",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert a list of words to a sentence",
   "type": "module",
   "repository": {
@@ -11,8 +11,8 @@
     "access": "public"
   },
   "dependencies": {
-    "bunchee": "6.3.2",
-    "@etcdigital/get-number-from-string": "^1.0.0"
+    "@etcdigital/get-number-from-string": "^1.0.0",
+    "bunchee": "6.3.2"
   },
   "homepage": "https://usertimeline.com",
   "main": "./dist/index.js",
