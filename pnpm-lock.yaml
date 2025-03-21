@@ -40,6 +40,8 @@ importers:
 
   packages/colors-converter: {}
 
+  packages/get-number-string: {}
+
   packages/nanoid:
     dependencies:
       nanoid:
