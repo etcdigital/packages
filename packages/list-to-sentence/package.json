@@ -1,6 +1,6 @@
 {
   "name": "list-to-sentence",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert a list of words to a sentence",
   "type": "module",
   "repository": {
