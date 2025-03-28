@@ -1,12 +1,12 @@
 {
-  "name": "root",
+  "name": "etcdigital-packages",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "postinstall": "pnpm -r build",
-    "publish:npm": "pnpm -r build && pnpm lerna publish --no-private",
+    "pkg:publish": "pnpm -r build && lerna publish --conventional-commits --create-release=github --yes",
     "test": "vitest"
   },
   "devDependencies": {
