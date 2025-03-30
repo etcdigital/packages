@@ -29,6 +29,8 @@ importers:
 
   packages/base64-token: {}
 
+  packages/clean-object: {}
+
   packages/cn:
     dependencies:
       class-variance-authority:
@@ -50,17 +52,19 @@ importers:
   packages/is:
     dependencies:
       '@etcdigital/get-number-from-string':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
 
   packages/list-to-sentence:
     dependencies:
       '@etcdigital/get-number-from-string':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       bunchee:
         specifier: 6.3.2
         version: 6.3.2(typescript@5.8.2)
+
+  packages/merge-object: {}
 
   packages/nanoid:
     dependencies:
@@ -249,8 +253,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@etcdigital/get-number-from-string@1.0.0':
-    resolution: {integrity: sha512-2DwerjmkaoaVsnnLlccsjxDkZXjNGb/raHwB1XvjCTr/+ymcdY41nMk+ryjrPj1iSwuwnFML06i491+QjwYtxQ==}
+  '@etcdigital/get-number-from-string@1.0.1':
+    resolution: {integrity: sha512-Uif1pg30nyNQlTCEafCQtJL//mydIC7vdaHZfWruxUM604W4AG3isgz4OhBy/U7u+NW/wf1tNZa7GH59Usc1Pg==}
 
   '@fastify/deepmerge@1.3.0':
     resolution: {integrity: sha512-J8TOSBq3SoZbDhM9+R/u77hP93gz/rajSA+K2kGyijPpORPWUXHUpTaleoj+92As0S9uPRP7Oi8IqMf0u+ro6A==}
@@ -3050,7 +3054,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.1':
     optional: true
 
-  '@etcdigital/get-number-from-string@1.0.0': {}
+  '@etcdigital/get-number-from-string@1.0.1': {}
 
   '@fastify/deepmerge@1.3.0': {}
 

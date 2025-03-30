@@ -1,0 +1,1 @@
+# @etcdigital/merge-object
