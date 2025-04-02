@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/is",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert a list of words to a sentence",
   "type": "module",
   "repository": {
