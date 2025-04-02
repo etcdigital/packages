@@ -93,3 +93,18 @@ export function hslToHex(h: number, s: number, l: number): string {
   };
   return `#${f(0)}${f(8)}${f(4)}`;
 }
+
+export function getContestTextFrom(valorHex: string) {
+  // Remove the "#" if present
+  const hex = valorHex.replace("#", "");
+
+  // Convert hex to RGB
+  const r = Number.parseInt(hex.substring(0, 2), 16);
+  const g = Number.parseInt(hex.substring(2, 4), 16);
+  const b = Number.parseInt(hex.substring(4, 6), 16);
+
+  // Calculate the YIQ value
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
+  return yiq >= 128 ? "dark" : "light";
+}

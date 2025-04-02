@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cmykToRgb, hexToHSL, hexToRgb, hslToHex, rgbToCmyk, rgbToHex } from ".";
+import { cmykToRgb, getContestTextFrom, hexToHSL, hexToRgb, hslToHex, rgbToCmyk, rgbToHex } from ".";
 
 describe("Conversões de cores", () => {
   // HEX ➝ RGB
@@ -128,5 +128,47 @@ describe('hslToHex', () => {
 
   it('converte HSL de azul corretamente', () => {
     expect(hslToHex(240, 100, 50)).toBe('#0000ff');
+  });
+});
+
+describe('getContestTextFrom', () => {
+  it('retorna "dark" para #ffffff (branco)', () => {
+    expect(getContestTextFrom('#ffffff')).toBe('dark');
+  });
+
+  it('retorna "light" para #000000 (preto)', () => {
+    expect(getContestTextFrom('#000000')).toBe('light');
+  });
+
+  it('retorna "light" para #ff0000 (vermelho)', () => {
+    expect(getContestTextFrom('#ff0000')).toBe('light');
+  });
+
+  it('retorna "light" para #00ff00 (verde)', () => {
+    expect(getContestTextFrom('#00ff00')).toBe('dark');
+  });
+
+  it('retorna "dark" para #0000ff (azul)', () => {
+    expect(getContestTextFrom('#0000ff')).toBe('light');
+  });
+
+  it('retorna "dark" para #aaaaaa (cinza claro)', () => {
+    expect(getContestTextFrom('#aaaaaa')).toBe('dark');
+  });
+
+  it('retorna "light" para #555555 (cinza escuro)', () => {
+    expect(getContestTextFrom('#555555')).toBe('light');
+  });
+
+  it('retorna "dark" para #ffff00 (amarelo)', () => {
+    expect(getContestTextFrom('#ffff00')).toBe('dark');
+  });
+
+  it('retorna "dark" para #ff00ff (magenta)', () => {
+    expect(getContestTextFrom('#ff00ff')).toBe('light');
+  });
+
+  it('retorna "light" para #008080 (teal)', () => {
+    expect(getContestTextFrom('#008080')).toBe('light');
   });
 });
