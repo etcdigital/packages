@@ -1,0 +1,30 @@
+name: Nodejs package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-grp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+          scope: '@clinica'
+          cache: 'pnpm'
+      - run: |
+          git config --global user.email "tiago@etc.digital"
+          git config --global user.name "Tiago de Souza Santos"
+      - run: pnpm install
+      - run: pnpm -r build
+      - run: pnpm pkg:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

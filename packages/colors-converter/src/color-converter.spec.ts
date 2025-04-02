@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cmykToRgb, hexToRgb, rgbToCmyk, rgbToHex } from ".";
+import { cmykToRgb, hexToHSL, hexToRgb, hslToHex, rgbToCmyk, rgbToHex } from ".";
 
 describe("Conversões de cores", () => {
   // HEX ➝ RGB
@@ -84,5 +84,49 @@ describe("Conversões de cores", () => {
 
   it("Converte CMYK (0, 0, 0, 0) para RGB", () => {
     expect(cmykToRgb(0, 0, 0, 0)).toEqual({ r: 255, g: 255, b: 255 });
+  });
+});
+
+describe('hexToHSL', () => {
+  it('converte preto corretamente', () => {
+    expect(hexToHSL('#000000')).toEqual({ h: 0, s: 0, l: 0 });
+  });
+
+  it('converte branco corretamente', () => {
+    expect(hexToHSL('#ffffff')).toEqual({ h: 0, s: 0, l: 100 });
+  });
+
+  it('converte vermelho corretamente', () => {
+    expect(hexToHSL('#ff0000')).toEqual({ h: 0, s: 100, l: 50 });
+  });
+
+  it('converte verde corretamente', () => {
+    expect(hexToHSL('#00ff00')).toEqual({ h: 120, s: 100, l: 50 });
+  });
+
+  it('converte azul corretamente', () => {
+    expect(hexToHSL('#0000ff')).toEqual({ h: 240, s: 100, l: 50 });
+  });
+});
+
+describe('hslToHex', () => {
+  it('converte HSL de preto corretamente', () => {
+    expect(hslToHex(0, 0, 0)).toBe('#000000');
+  });
+
+  it('converte HSL de branco corretamente', () => {
+    expect(hslToHex(0, 0, 100)).toBe('#ffffff');
+  });
+
+  it('converte HSL de vermelho corretamente', () => {
+    expect(hslToHex(0, 100, 50)).toBe('#ff0000');
+  });
+
+  it('converte HSL de verde corretamente', () => {
+    expect(hslToHex(120, 100, 50)).toBe('#00ff00');
+  });
+
+  it('converte HSL de azul corretamente', () => {
+    expect(hslToHex(240, 100, 50)).toBe('#0000ff');
   });
 });

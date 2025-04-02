@@ -27,8 +27,6 @@ describe('isBirthValid Validator', () => {
     );
   });
 
-
-
   const dt = format(addYears(new Date(), 1), 'yyyy-MM-dd');
 
   it.concurrent(`Should return false on ${dt}`, () => {
