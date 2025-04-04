@@ -47,6 +47,12 @@ importers:
 
   packages/datatime-regex: {}
 
+  packages/dinheiro:
+    dependencies:
+      '@etcdigital/safe-to':
+        specifier: workspace:*
+        version: link:../safe-to
+
   packages/get-number-string: {}
 
   packages/is:
