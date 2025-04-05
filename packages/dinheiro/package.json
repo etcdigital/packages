@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/dinheiro",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -25,7 +25,10 @@
       }
     }
   },
-  "files": ["readme.md", "dist"],
+  "files": [
+    "readme.md",
+    "dist"
+  ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false

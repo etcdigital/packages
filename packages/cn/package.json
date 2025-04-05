@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/cn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "dependencies": {
     "class-variance-authority": "0.7.0",
     "clsx": "^2.0.0",
@@ -27,7 +27,10 @@
       }
     }
   },
-  "files": ["readme.md", "dist"],
+  "files": [
+    "readme.md",
+    "dist"
+  ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
