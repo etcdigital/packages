@@ -1,10 +1,8 @@
 import type { z } from 'zod';
 
-// @ts-expect-error
 export type ZodSchema =
-  | z.ZodUnion
-  | z.AnyZodObject
-  | z.ZodArray<z.AnyZodObject>;
+  // @ts-expect-error
+  z.ZodUnion | z.AnyZodObject | z.ZodArray<z.AnyZodObject>;
 
 export const applicationJson = 'application/json';
 
