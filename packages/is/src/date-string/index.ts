@@ -1,5 +1,5 @@
 export const isDateString = (input: string, minYear = 1900): boolean => {
-  if (isNaN(Date.parse(input))) {
+  if (Number.isNaN(Date.parse(input))) {
     return false;
   }
   const minYearCalc: number = new Date(minYear, 1).getTime();

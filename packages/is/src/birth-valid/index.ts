@@ -3,17 +3,17 @@ import { isDateValid } from '../date-valid';
 
 interface Response {
   valid: boolean;
-  reason: '' | 'past' | 'future';
+  reason: '' | 'invalid' | 'past' | 'future';
 }
 
 export const isBirthValid = (value: string): Response => {
   if (!isDateValid(value)) {
-    return { valid: false, reason: 'past' };
+    return { valid: false, reason: 'invalid' };
   }
 
   const valuesDate = parseISO(value);
   if (!isValid(valuesDate)) {
-    return { valid: false, reason: 'past' };
+    return { valid: false, reason: 'invalid' };
   }
 
   const todayFullYear = valuesDate.getFullYear();
