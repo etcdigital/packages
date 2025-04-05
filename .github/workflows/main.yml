@@ -23,7 +23,7 @@ jobs:
           git config --global user.email "tiago@etc.digital"
           git config --global user.name "Tiago de Souza Santos"
       - run: pnpm install
-      - run: pnpm -r build
+      - run: pnpm run build
       - run: pnpm pkg:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

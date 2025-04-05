@@ -1,0 +1,9 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "outputs": ["dist/**"]
+    }
+  }
+}
