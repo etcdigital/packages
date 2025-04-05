@@ -27,7 +27,11 @@ const mapToNumbers = (value: string): number[] =>
   mapToNumeric(value).split('').map(Number);
 
 export const isCNPJ = (value: string): boolean => {
-  if (!/^(\d{14}|\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})$/.test(value.replace(/\D/g, ''))) {
+  if (
+    !/^(\d{14}|\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})$/.test(
+      value.replace(/\D/g, ''),
+    )
+  ) {
     return false;
   }
   const numbers = mapToNumbers(value.toString());
@@ -37,7 +41,7 @@ export const isCNPJ = (value: string): boolean => {
   const checkers = generateCheckSums(
     numbers,
     [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
-  )
+  );
   return (
     numbers[12] === getRemaining(checkers[0]) &&
     numbers[13] === getRemaining(checkers[1])

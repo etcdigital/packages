@@ -1,4 +1,4 @@
-import { currencySeparatorMask } from "./utils";
+import { currencySeparatorMask } from './utils';
 
 const strFloat = (value: string | number): number =>
   Number.parseFloat(value.toString());
@@ -6,9 +6,9 @@ const strFloat = (value: string | number): number =>
 const float = (value: string): number => Number.parseFloat(value);
 
 const floatFix = (value: number | string, fixed = 2): number => {
-  const numberValue = typeof value === 'string' ? float(value) : value
-  return float(numberValue.toFixed(fixed))
-}
+  const numberValue = typeof value === 'string' ? float(value) : value;
+  return float(numberValue.toFixed(fixed));
+};
 
 export const moneyFormat = (amount: number, fixed = 2) => {
   const valorComFixo = amount.toFixed(fixed);

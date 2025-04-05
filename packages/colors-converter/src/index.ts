@@ -1,14 +1,17 @@
 export function hexToRgb(hex: string): { r: number; g: number; b: number } {
   let hexValue = hex.replace(/^#/, '');
   if (hexValue.length === 3) {
-    hexValue = hexValue.split('').map(char => char + char).join('');
+    hexValue = hexValue
+      .split('')
+      .map((char) => char + char)
+      .join('');
   }
 
   const num = Number.parseInt(hexValue, 16);
   return {
     r: (num >> 16) & 255,
     g: (num >> 8) & 255,
-    b: num & 255
+    b: num & 255,
   };
 }
 
@@ -16,7 +19,11 @@ export function rgbToHex(r: number, g: number, b: number): string {
   return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
 }
 
-export function rgbToCmyk(r: number, g: number, b: number): { c: number; m: number; y: number; k: number } {
+export function rgbToCmyk(
+  r: number,
+  g: number,
+  b: number,
+): { c: number; m: number; y: number; k: number } {
   if (r === 0 && g === 0 && b === 0) return { c: 0, m: 0, y: 0, k: 1 };
 
   const c = 1 - r / 255;
@@ -28,11 +35,16 @@ export function rgbToCmyk(r: number, g: number, b: number): { c: number; m: numb
     c: +(c - k) / (1 - k),
     m: +(m - k) / (1 - k),
     y: +(y - k) / (1 - k),
-    k: +k
+    k: +k,
   };
 }
 
-export function cmykToRgb(c: number, m: number, y: number, k: number): { r: number; g: number; b: number } {
+export function cmykToRgb(
+  c: number,
+  m: number,
+  y: number,
+  k: number,
+): { r: number; g: number; b: number } {
   const r = 255 * (1 - c) * (1 - k);
   const g = 255 * (1 - m) * (1 - k);
   const b = 255 * (1 - y) * (1 - k);
@@ -40,7 +52,11 @@ export function cmykToRgb(c: number, m: number, y: number, k: number): { r: numb
   return { r: Math.round(r), g: Math.round(g), b: Math.round(b) };
 }
 
-export function hexToHSL(colorHex: string): { h: number; s: number; l: number } {
+export function hexToHSL(colorHex: string): {
+  h: number;
+  s: number;
+  l: number;
+} {
   // Remove "#" se existir
   const hex = colorHex[0] === '#' ? colorHex.slice(1) : colorHex;
 
@@ -85,18 +101,20 @@ export function hexToHSL(colorHex: string): { h: number; s: number; l: number } 
 
 export function hslToHex(h: number, s: number, l: number): string {
   const lightness = l / 100;
-  const a = s * Math.min(lightness, 1 - lightness) / 100;
+  const a = (s * Math.min(lightness, 1 - lightness)) / 100;
   const f = (n: number) => {
     const k = (n + h / 30) % 12;
     const color = lightness - a * Math.max(-1, Math.min(k - 3, 9 - k, 1));
-    return Math.round(255 * color).toString(16).padStart(2, '0');
+    return Math.round(255 * color)
+      .toString(16)
+      .padStart(2, '0');
   };
   return `#${f(0)}${f(8)}${f(4)}`;
 }
 
 export function getContestTextFrom(valorHex: string) {
   // Remove the "#" if present
-  const hex = valorHex.replace("#", "");
+  const hex = valorHex.replace('#', '');
 
   // Convert hex to RGB
   const r = Number.parseInt(hex.substring(0, 2), 16);
@@ -106,5 +124,5 @@ export function getContestTextFrom(valorHex: string) {
   // Calculate the YIQ value
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-  return yiq >= 128 ? "dark" : "light";
+  return yiq >= 128 ? 'dark' : 'light';
 }

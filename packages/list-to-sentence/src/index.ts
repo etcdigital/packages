@@ -1,7 +1,12 @@
+type Separator = { conjunction: string; separator: string };
 
-type Separator = { conjunction: string, separator: string }
-
-export const listToSentence = (list: string[], { conjunction, separator }: Separator = { conjunction: ' e ', separator: ', ' }) => {
+export const listToSentence = (
+  list: string[],
+  { conjunction, separator }: Separator = {
+    conjunction: ' e ',
+    separator: ', ',
+  },
+) => {
   if (list.length === 0) {
     return '';
   }

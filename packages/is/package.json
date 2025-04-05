@@ -30,10 +30,7 @@
       }
     }
   },
-  "files": [
-    "readme.md",
-    "dist"
-  ],
+  "files": ["readme.md", "dist"],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false

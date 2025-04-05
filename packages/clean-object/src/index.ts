@@ -16,7 +16,7 @@ class getByObject {
       if (this.obj[key] || this.obj[key] === false) {
         newObj[key] = this.obj[key];
       }
-    };
+    }
 
     return newObj;
   }
@@ -25,16 +25,16 @@ class getByObject {
 export const getBy = (value: any) => new getByObject(value);
 
 export const clean = (obj: any, excludeEmpty = false): any => {
-  const shadow = { ...obj }
-  const keys = Object.keys(shadow)
+  const shadow = { ...obj };
+  const keys = Object.keys(shadow);
 
   for (const key of keys) {
     if (shadow[key] === null || shadow[key] === undefined) {
-      delete shadow[key]
+      delete shadow[key];
     }
     if (excludeEmpty && shadow[key] === '') {
-      delete shadow[key]
+      delete shadow[key];
     }
   }
-  return shadow
-}
+  return shadow;
+};

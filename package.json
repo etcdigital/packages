@@ -1,15 +1,17 @@
 {
   "name": "etcdigital-packages",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "scripts": {
     "postinstall": "pnpm -r build",
     "pkg:publish": "pnpm -r build && lerna publish --conventional-commits --create-release=github --yes",
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "pnpm biome check .",
+    "lint:apply": "pnpm biome lint --apply .",
+    "lint:write": "pnpm biome format --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.13.10",
     "bunchee": "6.4.0",
     "date-fns": "^4.1.0",
