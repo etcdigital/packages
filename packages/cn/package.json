@@ -2,7 +2,7 @@
   "name": "@etcdigital/cn",
   "version": "1.0.5",
   "dependencies": {
-    "class-variance-authority": "0.7.0",
+    "class-variance-authority": "0.7.1",
     "clsx": "^2.0.0",
     "tailwind-merge": "^1.14.0"
   },
