@@ -3,7 +3,6 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "postinstall": "turbo run build",
     "build": "turbo run build --concurrency 1",
     "pkg:publish": "turbo run build && lerna publish --conventional-commits --create-release=github --yes",
     "test": "vitest",

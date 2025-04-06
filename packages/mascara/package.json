@@ -1,0 +1,36 @@
+{
+  "name": "@etcdigital/mascara",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://paletasdecores.com.br",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "bunchee"
+  },
+  "dependencies": {
+    "@etcdigital/safe-to": "workspace:*",
+    "@etcdigital/dinheiro": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "readme.md",
+    "dist"
+  ],
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false
+}
