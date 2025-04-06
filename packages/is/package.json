@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/is",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert a list of words to a sentence",
   "type": "module",
   "repository": {
@@ -16,7 +16,7 @@
     "build": "bunchee"
   },
   "dependencies": {
-    "@etcdigital/get-number-from-string": "^1.0.2"
+    "@etcdigital/get-number-from-string": "^1.0.3"
   },
   "exports": {
     ".": {
@@ -30,7 +30,10 @@
       }
     }
   },
-  "files": ["readme.md", "dist"],
+  "files": [
+    "readme.md",
+    "dist"
+  ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false

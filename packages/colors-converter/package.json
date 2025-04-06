@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/colors-converter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publishConfig": {
     "access": "public"
   },
@@ -22,7 +22,10 @@
       }
     }
   },
-  "files": ["readme.md", "dist"],
+  "files": [
+    "readme.md",
+    "dist"
+  ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false

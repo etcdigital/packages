@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/mascara",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },
@@ -11,8 +11,8 @@
     "build": "bunchee"
   },
   "dependencies": {
-    "@etcdigital/safe-to": "workspace:*",
-    "@etcdigital/dinheiro": "workspace:*"
+    "@etcdigital/dinheiro": "workspace:*",
+    "@etcdigital/safe-to": "workspace:*"
   },
   "exports": {
     ".": {
@@ -26,7 +26,10 @@
       }
     }
   },
-  "files": ["readme.md", "dist"],
+  "files": [
+    "readme.md",
+    "dist"
+  ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false

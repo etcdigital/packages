@@ -1,6 +1,6 @@
 {
   "name": "@etcdigital/nanoid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "nanoid": "^5.0.9"
   },
@@ -25,7 +25,10 @@
       }
     }
   },
-  "files": ["readme.md", "dist"],
+  "files": [
+    "readme.md",
+    "dist"
+  ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false
