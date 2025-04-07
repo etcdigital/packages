@@ -1,6 +1,6 @@
 import { describe } from 'node:test';
 import { expect, test } from 'vitest';
-import { list2phase, textCapitalize } from './';
+import { list2phase, reverseString, textCapitalize } from './';
 
 describe('textCapitalize', () => {
   test('Should return a string capitalize', () => {
@@ -70,5 +70,43 @@ describe('list2phase', () => {
 
   test('funciona com itens repetidos', () => {
     expect(list2phase(['maçã', 'maçã', 'maçã'])).toBe('maçã, maçã e maçã');
+  });
+});
+
+describe('reverseString', () => {
+  test('inverte uma palavra comum', () => {
+    expect(reverseString('banana')).toBe('ananab');
+  });
+
+  test('inverte uma string com espaços', () => {
+    expect(reverseString('olá mundo')).toBe('odnum álo');
+  });
+
+  test('inverte uma string com números', () => {
+    expect(reverseString('abc123')).toBe('321cba');
+  });
+
+  test('inverte uma string com caracteres especiais', () => {
+    expect(reverseString('!@#abc')).toBe('cba#@!');
+  });
+
+  test('retorna string vazia se a entrada for vazia', () => {
+    expect(reverseString('')).toBe('');
+  });
+
+  test('inverte uma única letra', () => {
+    expect(reverseString('a')).toBe('a');
+  });
+
+  test('inverte uma string palíndroma (mesmo resultado)', () => {
+    expect(reverseString('radar')).toBe('radar');
+  });
+
+  test('inverte string com espaços em branco no começo e fim', () => {
+    expect(reverseString('  abc  ')).toBe('  cba  ');
+  });
+
+  test('inverte uma frase completa', () => {
+    expect(reverseString('Vitest é top')).toBe('pot é tsetiV');
   });
 });

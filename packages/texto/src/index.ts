@@ -25,3 +25,5 @@ export const list2phase = (items: string[]): string => {
   const lastItem = items[items.length - 1];
   return [itemsExceptLast.join(', '), lastItem].join(' e ');
 };
+
+export const reverseString = (str: string) => str.split('').reverse().join('')
