@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/etcdigital/packages/compare/@etcdigital/texto@0.0.3...@etcdigital/texto@0.0.4) (2025-04-07)
+
+**Note:** Version bump only for package @etcdigital/texto
+
+
+
+
+
 ## [0.0.3](https://github.com/etcdigital/packages/compare/@etcdigital/texto@0.0.2...@etcdigital/texto@0.0.3) (2025-04-07)
 
 **Note:** Version bump only for package @etcdigital/texto
